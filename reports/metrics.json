@@ -1,0 +1,100 @@
+{
+  "data": {
+    "synthetic": true,
+    "n_rows": 60000,
+    "n_fraud": 422,
+    "fraud_rate": 0.007033333333333333,
+    "n_test": 15000,
+    "n_test_fraud": 105
+  },
+  "cv_pr_auc_mean": {
+    "baseline_prior": 0.007044444444444445,
+    "logreg_class_weight": 0.5317968601885811,
+    "hgb_unweighted": 0.42123931812521387,
+    "hgb_class_weight": 0.5026247606401267,
+    "hgb_undersample": 0.5105580275389032
+  },
+  "cv_pr_auc_std": {
+    "baseline_prior": 3.849001794597519e-05,
+    "logreg_class_weight": 0.04111348069658097,
+    "hgb_unweighted": 0.04560483412461592,
+    "hgb_class_weight": 0.01948863869148496,
+    "hgb_undersample": 0.02062796243785978
+  },
+  "best_strategy": "logreg_class_weight",
+  "cost_threshold": 0.8462822251518757,
+  "validation_cost_at_threshold": 10060.45,
+  "test": {
+    "baseline_prior": {
+      "pr_auc": 0.007
+    },
+    "logreg_class_weight": {
+      "pr_auc": 0.537276790458612
+    },
+    "hgb_unweighted": {
+      "pr_auc": 0.47957144489070863
+    },
+    "hgb_class_weight": {
+      "pr_auc": 0.4698901768574293
+    },
+    "hgb_undersample": {
+      "pr_auc": 0.5262200740130273
+    },
+    "isolation_forest (unsupervised)": {
+      "pr_auc": 0.26518660681972633
+    },
+    "logreg_class_weight@cost_threshold": {
+      "pr_auc": 0.537276790458612,
+      "roc_auc": 0.9920759602934829,
+      "precision": 0.2246376811594203,
+      "recall": 0.8857142857142857,
+      "f1": 0.3583815028901734,
+      "n_flagged": 414
+    },
+    "logreg_class_weight@0.5": {
+      "pr_auc": 0.537276790458612,
+      "roc_auc": 0.9920759602934829,
+      "precision": 0.12560975609756098,
+      "recall": 0.9809523809523809,
+      "f1": 0.2227027027027027,
+      "n_flagged": 820
+    },
+    "isolation_forest@same_alert_budget": {
+      "pr_auc": 0.26518660681972633,
+      "roc_auc": 0.9353857958087565,
+      "precision": 0.14251207729468598,
+      "recall": 0.5619047619047619,
+      "f1": 0.22736030828516376,
+      "n_flagged": 414
+    }
+  },
+  "test_cost": {
+    "no_model": 14272.669999999998,
+    "default_0.5_threshold": 4198.68,
+    "cost_optimal_threshold": 3017.7200000000003,
+    "isolation_forest_same_budget": 6688.88
+  },
+  "test_cost_saving_vs_no_model_pct": 78.85665401077723,
+  "top_features": [
+    [
+      "tx_last_24h",
+      0.37467806709408896
+    ],
+    [
+      "amount_ratio",
+      0.22125842357460201
+    ],
+    [
+      "is_night",
+      0.17304780422122276
+    ],
+    [
+      "foreign_country",
+      0.1612484245086694
+    ],
+    [
+      "new_merchant",
+      0.14481470515366537
+    ]
+  ]
+}
